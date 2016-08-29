@@ -3,5 +3,11 @@
     <p><%= @channel.name %></p>
     <p><%= @channel.callsign %></p>
     <p><%= @channel.price_per_month %></p>
+    <% if @subscriber %>
+    <form action="/subscriptions/<%= @channel.id %>" method="POST">
+      <input type="hidden" name="_method" value="delete">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <% end %>
   </div>
 </div>

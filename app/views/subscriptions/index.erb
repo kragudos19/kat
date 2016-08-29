@@ -1,0 +1,7 @@
+<div class="container">
+    <% if @subscribed_channels %>
+      <% @subscribed_channels.each do |subscribed_channel| %>
+      <p><a href="/channels/<%= channel.id %>"><%= channel.name %></a></p>
+      <% end %>
+    <% end %>
+</div>
