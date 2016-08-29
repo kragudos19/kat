@@ -8,7 +8,7 @@ get '/subscriptions' do
   end
 end
 
-post '/subscription/new' do
+post '/subscription' do
   @user = User.find_by(id: session[:user_id])
   @channel = Channel.find_by(params[:channel][:id])
 end

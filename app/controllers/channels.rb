@@ -8,7 +8,6 @@ get '/channels/:id' do
   @user = User.find_by(id: session[:id])
   if @channel
     @subscriber = @user.subscriptions.include?(@channel) if @user
-    p "~~~~~~~~~~~~~~~~~"
     p @subscriber
     erb :"/channels/show"
   else
