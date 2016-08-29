@@ -1,3 +1,7 @@
+get '/users/new' do
+  erb :'users/new'
+end
+
 get '/users/:id' do
   @user = User.find(session[:user_id])
   erb :'users/show'
@@ -7,9 +11,6 @@ get '/login' do
   erb :'users/login'
 end
 
-get '/users/new' do
-  erb :'users/new'
-end
 
 post '/register' do
   user_info = params[:user]

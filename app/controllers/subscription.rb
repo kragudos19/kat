@@ -13,6 +13,7 @@ post '/subscription/new' do
   @channel = Channel.find_by(params[:channel][:id])
 end
 
-delete '/subscriptions/delete' do
+delete '/subscriptions/:id' do
+  # @subscription = Subscription.find_by(:)
 
 end
