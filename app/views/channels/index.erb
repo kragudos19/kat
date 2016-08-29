@@ -1,0 +1,7 @@
+<div class="container">
+    <% if @channels %>
+      <% @channels.flatten.each do |channel| %>
+      <p><a href="/channels/<%= channel.id %>"><%= channel.name %></a></p>
+      <% end %>
+    <% end %>
+</div>

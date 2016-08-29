@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-mid-4">
+    <h1>Register to start using DevBootcamp Cable!</h1>
+    <% if @errors %>
+      <% @errors.flatten.each do |error| %>
+      <p><%= error %></p>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="col-mid-4">
+    <form action="/register" method="POST">
+       <div class="form-group">
+          <label for="first_name">First Name</label>
+          <input type="text" name="user[first_name]"class="form-control" id="first_name" placeholder="First Name" autofocus>
+       </div>
+       <div class="form-group">
+        <label for="last_name">Last Name</label>
+        <input type="text" name="user[last_name]"class="form-control" id="last_name" placeholder="Last Name" autofocus>
+       </div>
+       <%= erb :'_user_form' %>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  <ul class="nav nav-pills">
+  <% if session[:user_id] %>
+    <li><a href="/logout">Logout</a></li>
+  <% else %>
+    <li><a href="/login">Login</a></li>
+    <li><a href="/users/new">Register</a></li>
+  <% end %>
+  </ul>
+</div>

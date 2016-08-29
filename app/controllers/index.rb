@@ -1,5 +1,6 @@
-get '/' do
+enable :sessions
 
-  erb :index
+get '/' do
+  redirect '/channels/index'
 end
 
